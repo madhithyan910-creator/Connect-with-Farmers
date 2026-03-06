@@ -164,7 +164,7 @@ export function Home({ setCurrentView, setIsLoginOpen }: HomeProps) {
 {/* Farmer Story Video */}
 <section className="py-16 bg-[#e8e3d6]">
   <div className="max-w-6xl mx-auto px-4 text-center">
-
+<section data-aos="fade-up" className="py-16 bg-[#e8e3d6]">
     <h2 className="text-3xl font-bold mb-6">
       Our Farmers Story
     </h2>
