@@ -45,12 +45,18 @@ export function Home({ setCurrentView, setIsLoginOpen }: HomeProps) {
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-farm-light">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1590767187868-b8e9ece0974b?q=80&w=2000&auto=format&fit=crop" 
-            alt="Indian Farmer in Field" 
-            className="w-full h-full object-cover opacity-80"
-            referrerPolicy="no-referrer"
-          />
+    
+<img 
+  src="/hero-bg.jpg" // Path to your local file in the public folder
+  alt="Indian Farmer in Field" 
+  className="w-full h-full object-cover opacity-80"
+  onError={(e) => {
+    // Fallback to Unsplash if local image is not found
+    e.currentTarget.src = "https://images.unsplash.com/photo-1590767187868-b8e9ece0974b?q=80&w=2000&auto=format&fit=crop";
+  }}
+  referrerPolicy="no-referrer"
+/>
+
           <div className="absolute inset-0 bg-gradient-to-r from-farm-light/80 via-farm-light/40 to-transparent"></div>
         </div>
 
@@ -154,6 +160,24 @@ export function Home({ setCurrentView, setIsLoginOpen }: HomeProps) {
           </div>
         </div>
       </section>
+
+
+<h2 style={{textAlign:"center", marginBottom:"20px"}}>
+Watch Our Farmers' Story
+</h2>
+<section style={{padding:"60px 20px", textAlign:"center"}}>
+  <h2>Our Farmers Story</h2>
+
+  <video
+    controls
+    style={{width:"80%", maxWidth:"900px", borderRadius:"12px"}}
+  >
+    <source src="public/videos/farm-story.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</section>
+
+
 
       {/* Market Opportunity */}
       <section id="market" className="py-24 bg-farm-green text-white overflow-hidden relative">

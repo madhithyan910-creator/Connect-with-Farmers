@@ -46,6 +46,7 @@ export function Marketplace() {
           </div>
         </div>
 
+
         {/* Categories */}
         <div className="flex gap-3 overflow-x-auto pb-4 mb-12 no-scrollbar">
           {categories.map(cat => (
