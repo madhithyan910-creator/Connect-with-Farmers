@@ -161,6 +161,7 @@ export function Home({ setCurrentView, setIsLoginOpen }: HomeProps) {
         </div>
       </section>
 
+{/* Farmer Story Video */}
 <section className="py-16 bg-[#e8e3d6]">
   <div className="max-w-6xl mx-auto px-4 text-center">
 
@@ -174,18 +175,14 @@ export function Home({ setCurrentView, setIsLoginOpen }: HomeProps) {
   muted
   loop
   playsInline
-  controls
   className="w-full rounded-xl"
->
-  <source src="/farmer-story.mp4" type="video/mp4" />
-</video>
+>        <source src="/farmer-story.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
 
   </div>
 </section>
-
       {/* Market Opportunity */}
       <section id="market" className="py-24 bg-farm-green text-white overflow-hidden relative">
         <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
