@@ -161,23 +161,30 @@ export function Home({ setCurrentView, setIsLoginOpen }: HomeProps) {
         </div>
       </section>
 
+<section className="py-16 bg-[#e8e3d6]">
+  <div className="max-w-6xl mx-auto px-4 text-center">
 
-<h2 style={{textAlign:"center", marginBottom:"20px"}}>
-Watch Our Farmers' Story
-</h2>
-<section style={{padding:"60px 20px", textAlign:"center"}}>
-  <h2>Our Farmers Story</h2>
+    <h2 className="text-3xl font-bold mb-6">
+      Our Farmers Story
+    </h2>
 
-  <video
-    controls
-    style={{width:"80%", maxWidth:"900px", borderRadius:"12px"}}
-  >
-    <source src="public/videos/farm-story.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+    <div className="rounded-xl overflow-hidden shadow-lg">
+<video
+  autoPlay
+  muted
+  loop
+  playsInline
+  controls
+  className="w-full rounded-xl"
+>
+  <source src="/farmer-story.mp4" type="video/mp4" />
+</video>
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+  </div>
 </section>
-
-
 
       {/* Market Opportunity */}
       <section id="market" className="py-24 bg-farm-green text-white overflow-hidden relative">
