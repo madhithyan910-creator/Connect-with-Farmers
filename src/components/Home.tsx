@@ -1,6 +1,3 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -48,24 +45,6 @@ export function Home({ setCurrentView, setIsLoginOpen }: HomeProps) {
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-farm-light">
         <div className="absolute inset-0 z-0">
-
-function Home() {
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000
-    });
-  }, []);
-
-  return (
-    <div>
-      {/* content */}
-    </div>
-  );
-}
-
-export default Home;
-
     
 <img 
   src="/hero-bg.jpg" // Path to your local file in the public folder
@@ -185,6 +164,7 @@ export default Home;
 {/* Farmer Story Video */}
 <section className="py-16 bg-[#e8e3d6]">
   <div className="max-w-6xl mx-auto px-4 text-center">
+
     <h2 className="text-3xl font-bold mb-6">
       Our Farmers Story
     </h2>
@@ -442,6 +422,74 @@ export default Home;
           </div>
         </div>
       </section>
+
+{/* Our Team */}
+<section className="py-24 bg-farm-light">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-bold text-farm-green serif mb-4">
+        Meet Our Team
+      </h2>
+      <p className="text-gray-600 max-w-2xl mx-auto">
+        A passionate group of innovators committed to building a transparent
+        and sustainable agricultural marketplace.
+      </p>
+    </div>
+
+    <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+
+      {[
+        {
+          name: "Member 1",
+          role: "Founder & Strategy",
+          img: "/team1.jpg"
+        },
+        {
+          name: "Member 2",
+          role: "Technology Lead",
+          img: "/team2.jpg"
+        },
+        {
+          name: "Member 3",
+          role: "Operations",
+          img: "/team3.jpg"
+        },
+        {
+          name: "Member 4",
+          role: "Farmer Relations",
+          img: "/team4.jpg"
+        },
+        {
+          name: "Member 5",
+          role: "Marketing & Outreach",
+          img: "/team5.jpg"
+        }
+      ].map((member, i) => (
+        <div
+          key={i}
+          className="bg-white rounded-3xl shadow-md p-6 text-center hover:shadow-xl transition"
+        >
+          <img
+            src={member.img}
+            alt={member.name}
+            className="w-28 h-28 mx-auto rounded-full object-cover mb-4"
+          />
+
+          <h4 className="font-bold text-farm-green text-lg">
+            {member.name}
+          </h4>
+
+          <p className="text-sm text-gray-500">
+            {member.role}
+          </p>
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+</section>
 
       {/* CTA Section */}
       <section className="py-24 bg-white">
