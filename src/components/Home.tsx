@@ -441,27 +441,27 @@ export function Home({ setCurrentView, setIsLoginOpen }: HomeProps) {
 
       {[
         {
-          name: "Member 1",
+          name: "Somshekhar",
           role: "Founder & Strategy",
           img: "/team1.jpg"
         },
         {
-          name: "Member 2",
+          name: "Adhithyan M",
           role: "Technology Lead",
           img: "/team2.jpg"
         },
         {
-          name: "Member 3",
+          name: "Satyam Kochar",
           role: "Operations",
           img: "/team3.jpg"
         },
         {
-          name: "Member 4",
+          name: "Younu Hwang Subba",
           role: "Farmer Relations",
           img: "/team4.jpg"
         },
         {
-          name: "Member 5",
+          name: "Himal Khawas",
           role: "Marketing & Outreach",
           img: "/team5.jpg"
         }
