@@ -491,6 +491,8 @@ export function Home({ setCurrentView, setIsLoginOpen }: HomeProps) {
   </div>
 </section>
 
+import FarmGame from "./FarmGame";
+
       {/* CTA Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -502,6 +504,7 @@ export function Home({ setCurrentView, setIsLoginOpen }: HomeProps) {
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
+<FarmGame />
             </div>
             <div className="relative z-10">
               <h2 className="text-5xl md:text-7xl font-bold serif mb-8">Ready to Connect?</h2>
