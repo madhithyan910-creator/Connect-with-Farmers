@@ -1,38 +1,34 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Connect With Farmers | Direct Farm Marketplace</title>
-    <link rel="icon" type="image/png" href="/logo.png" />
-  </head>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Connect With Farmers | Direct Farm Marketplace</title>
+<link rel="icon" type="image/png" href="/logo.png" />
+</head>
 
-  <body>
+<body>
 
-    <!-- Language Translator -->
-    <div style="position: fixed; top: 10px; right: 10px; z-index: 1000;">
-      <div id="google_translate_element"></div>
-    </div>
+<!-- Google Translate Box -->
+<div id="google_translate_element" style="position:fixed; top:10px; right:10px; z-index:9999;"></div>
 
-    <div id="root"></div>
+<div id="root"></div>
 
-    <script type="module" src="/src/main.tsx"></script>
+<script type="module" src="/src/main.tsx"></script>
 
-    <!-- Google Translate Script -->
-    <script>
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement(
-          {
-            pageLanguage: "en",
-            includedLanguages: "en,hi,ml,ta,te,kn",
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-          },
-          "google_translate_element"
-        );
-      }
-    </script>
+<script>
+function googleTranslateElementInit() {
+new google.translate.TranslateElement(
+{
+pageLanguage: 'en',
+includedLanguages: 'en,hi,ml,ta,te,kn'
+},
+'google_translate_element'
+);
+}
+</script>
 
-    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-  </body>
+</body>
 </html>
