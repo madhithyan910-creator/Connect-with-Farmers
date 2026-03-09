@@ -1,4 +1,7 @@
 import React from 'react';
+import { useState } from "react";
+import { translations } from "../translations";
+import FarmGame from "./FarmGame";
 import { motion } from 'framer-motion';
 import { 
   MapPin, 
@@ -490,8 +493,20 @@ export function Home({ setCurrentView, setIsLoginOpen }: HomeProps) {
 
   </div>
 </section>
-
-import FarmGame from "./FarmGame";
+<FarmGame />
+const [lang, setLang] = useState("en");
+<select
+  value={lang}
+  onChange={(e) => setLang(e.target.value)}
+  className="border p-2 rounded-lg"
+>
+  <option value="en">English</option>
+  <option value="hi">Hindi</option>
+  <option value="ta">Tamil</option>
+  <option value="te">Telugu</option>
+  <option value="kn">Kannada</option>
+  <option value="ml">Malayalam</option>
+</select>
 
       {/* CTA Section */}
       <section className="py-24 bg-white">
@@ -504,7 +519,6 @@ import FarmGame from "./FarmGame";
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
-<FarmGame />
             </div>
             <div className="relative z-10">
               <h2 className="text-5xl md:text-7xl font-bold serif mb-8">Ready to Connect?</h2>
