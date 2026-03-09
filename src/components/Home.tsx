@@ -1,6 +1,4 @@
 import React from 'react';
-import { useState } from "react";
-import { translations } from "../translations";
 import FarmGame from "./FarmGame";
 import { motion } from 'framer-motion';
 import { 
@@ -494,20 +492,45 @@ export function Home({ setCurrentView, setIsLoginOpen }: HomeProps) {
   </div>
 </section>
 <FarmGame />
-const [lang, setLang] = useState("en");
-<select
-  value={lang}
-  onChange={(e) => setLang(e.target.value)}
-  className="border p-2 rounded-lg"
->
-  <option value="en">English</option>
-  <option value="hi">Hindi</option>
-  <option value="ta">Tamil</option>
-  <option value="te">Telugu</option>
-  <option value="kn">Kannada</option>
-  <option value="ml">Malayalam</option>
+import { useState } from "react";
+
+function Home() {
+
+const [language, setLanguage] = useState("en");
+
+return (
+<div>
+
+<select value={language} onChange={(e)=>setLanguage(e.target.value)}>
+<option value="en">English</option>
+<option value="hi">Hindi</option>
+<option value="ml">Malayalam</option>
+<option value="ta">Tamil</option>
+<option value="te">Telugu</option>
+<option value="kn">Kannada</option>
 </select>
-<select value={lang} onChange={(e) => setLang(e.target.value)}>
+
+<p>
+{language === "en" && "Connect With Farmers helps consumers buy directly from farmers ensuring fair prices."}
+
+{language === "hi" && "Connect With Farmers उपभोक्ताओं को किसानों से सीधे खरीदने में मदद करता है।"}
+
+{language === "ml" && "Connect With Farmers ഉപഭോക്താക്കളെ കര്‍ഷകരുമായി നേരിട്ട് ബന്ധിപ്പിക്കുന്നു."}
+
+{language === "ta" && "Connect With Farmers பயனர்களை விவசாயிகளுடன் இணைக்கிறது."}
+
+{language === "te" && "Connect With Farmers వినియోగదారులను రైతులతో కలుపుతుంది."}
+
+{language === "kn" && "Connect With Farmers ಬಳಕೆದಾರರನ್ನು ರೈತರೊಂದಿಗೆ ಸಂಪರ್ಕಿಸುತ್ತದೆ."}
+</p>
+
+</div>
+);
+
+}
+
+export default Home;
+
       {/* CTA Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
