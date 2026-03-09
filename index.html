@@ -4,11 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Connect With Farmers | Direct Farm Marketplace</title>
-<link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="icon" type="image/png" href="/logo.png" />
   </head>
+
   <body>
+
+    <!-- Language Translator -->
+    <div style="position: fixed; top: 10px; right: 10px; z-index: 1000;">
+      <div id="google_translate_element"></div>
+    </div>
+
     <div id="root"></div>
+
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Google Translate Script -->
+    <script>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            includedLanguages: "en,hi,ml,ta,te,kn",
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          },
+          "google_translate_element"
+        );
+      }
+    </script>
+
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
   </body>
 </html>
-
