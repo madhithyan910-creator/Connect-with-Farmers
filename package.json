@@ -10,6 +10,7 @@
     "lint": "tsc --noEmit"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "aos": "^2.3.4",
     "framer-motion": "^12.34.5",
     "leaflet": "^1.9.4",
