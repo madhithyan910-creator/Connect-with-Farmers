@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Analytics } from '@vercel/analytics/react';
 import { Navigation } from './components/Navigation';
 import { Home } from './components/Home';
 import { Marketplace } from './components/Marketplace';
@@ -143,6 +144,7 @@ export default function App() {
       />
 
       <Footer setCurrentView={setCurrentView} />
+      <Analytics />
     </div>
   );
 }
