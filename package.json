@@ -10,6 +10,7 @@
     "lint": "tsc --noEmit"
   },
   "dependencies": {
+    "@vercel/speed-insights": "^2.0.0",
     "aos": "^2.3.4",
     "framer-motion": "^12.34.5",
     "leaflet": "^1.9.4",
